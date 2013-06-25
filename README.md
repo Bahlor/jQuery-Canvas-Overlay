@@ -28,4 +28,4 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Release History
-_(Nothing yet)_
+ * 2013-06-25   v0.1.0   First initial release. Still experimental.
