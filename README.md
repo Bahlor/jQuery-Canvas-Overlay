@@ -4,6 +4,8 @@ jQuery plugin to allow canvas overlays with cutout at the current cursor positio
 
 ![GitHub Logo](http://www.cw-internetdienste.de/overlay/coheader.jpg)
 
+[See live Demo](http:www.cw-internetdienste.de/overlay/)
+
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
