@@ -1,0 +1,27 @@
+{
+  "name": "canvasoverlay",
+  "title": "jQuery Canvas Overlay",
+  "description": "jQuery plugin to allow canvas overlays with cutout at the current cursor position. Actions of elements behind the overlay, are still working.",
+  "version": "0.1.0",
+  "homepage": "http://www.cw-internetdienste.de/overlay/",
+  "author": {
+    "name": "Christian Weber",
+    "email": "christian@cw-internetdienste.de",
+    "url": "http://www.cw-internetdienste.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bahlor/jQuery-Canvas-Overlay"
+  },
+  "bugs": "https://github.com/Bahlor/jQuery-Canvas-Overlay/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.cw-internetdienste.de/overlay//blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "keywords": []
+}
