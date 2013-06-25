@@ -2,6 +2,8 @@
 
 jQuery plugin to allow canvas overlays with cutout at the current cursor position. Actions of elements behind the overlay, are still working.
 
+![GitHub Logo](http://www.cw-internetdienste.de/overlay/coheader.jpg)
+
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
