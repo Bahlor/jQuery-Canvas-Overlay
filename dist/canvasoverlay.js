@@ -11,7 +11,8 @@
     var defaults = {
         shadow:		10,
         radius:		150,
-		ready:		null
+		ready:		null,
+		background:	'rgba(0,0,0,1)'
     };
 
     // The actual plugin constructor
@@ -108,7 +109,7 @@
 
 			// render background
 			this.ctx.globalCompositeOperation	=	'source-over';
-			this.ctx.fillStyle	=	'rgba(0,0,0,1)';
+			this.ctx.fillStyle	=	this.options.background;
 			this.ctx.fillRect(0,0,this.element.width,this.element.height);
 	        
 	        // cutout
