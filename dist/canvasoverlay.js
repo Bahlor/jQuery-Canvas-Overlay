@@ -1,4 +1,4 @@
-/*! jQuery Canvas Overlay - v0.1.0 - 2013-06-25
+/*! jQuery Canvas Overlay - v0.1.0 - 2013-06-27
 * http://www.cw-internetdienste.de/overlay/
 * Copyright (c) 2013 Christian Weber; Licensed MIT */
 /*jshint devel:true */
@@ -34,7 +34,7 @@
     CanvasOverlay.prototype = {
         init: function () {
            // make it fullscreen
-           $(this.element).addClass('cw-overlay').attr({'width':this.wWidth,'height':this.wHeight});
+           $(this.element).addClass('cw-overlay').css({'z-index':9999,'width':'100%','height':'100%','position':'fixed','top':'0px','right':'0px','bottom':'0px','left':'0px'}).attr({'width':this.wWidth,'height':this.wHeight});
            
            // check for canvas
            if(this.element.getContext) {
