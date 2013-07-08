@@ -16,7 +16,8 @@
         shadow:		10,
         radius:		150,
 		ready:		null,
-		background:	'rgba(0,0,0,1)'
+		background:	'rgba(0,0,0,1)',
+		figure:	null
     };
 
     // The actual plugin constructor
@@ -92,17 +93,29 @@
         },
         
         createCursor: function() {
-			var el	=	document.createElement('canvas');
-			el.setAttribute('width',(this.options.radius+this.options.shadow)*2);
-			el.setAttribute('height',(this.options.radius+this.options.shadow)*2);
-			var ctx	=	el.getContext('2d');  
-
-			ctx.globalCompositeOperation	=	'source-over';
-			ctx.fillStyle	=	'rgba(255,0,0,1)';
-	        ctx.shadowBlur = this.options.shadow; 
-			ctx.shadowColor = 'rgba(255, 0, 0,.9)'; 
-	        ctx.arc(~~(el.width/2),~~(el.height/2),(this.options.radius),0,Math.PI*2);
-	        ctx.fill();
+			var el	=	document.createElement('canvas'),
+				ctx	=	null;
+			if(this.options.figure	!==	null	&&	this.options.figure instanceof Image) {
+				el.setAttribute('width',	this.options.figure.width);
+				el.setAttribute('height',	this.options.figure.height);
+				
+				ctx = el.getContext('2d');
+				
+				ctx.globalCompositeOperation	=	'source-over';
+				ctx.drawImage(this.options.figure,0,0);
+			} else {
+				el.setAttribute('width',(this.options.radius+this.options.shadow)*2);
+				el.setAttribute('height',(this.options.radius+this.options.shadow)*2);
+				
+				ctx	=	el.getContext('2d');  
+	
+				ctx.globalCompositeOperation	=	'source-over';
+				ctx.fillStyle	=	'rgba(255,0,0,1)';
+		        ctx.shadowBlur = this.options.shadow; 
+				ctx.shadowColor = 'rgba(255, 0, 0,.9)'; 
+		        ctx.arc(~~(el.width/2),~~(el.height/2),(this.options.radius),0,Math.PI*2);
+		        ctx.fill();
+		    }
 	        
 	        this.cursor	=	el;
         },
