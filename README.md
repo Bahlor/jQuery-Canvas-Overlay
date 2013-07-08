@@ -48,6 +48,10 @@ The Plugin has 4 configuration parameters:
 **Data-Attribute:** 	-	  
 **Description:** 	This allows to change the rendering color / pattern / gradient of the overlapping background.
 
+**Argument:**   	figure	  
+**Default:** 		null	  
+**Data-Attribute:** 	-	  
+**Description:** 	This allows to add image as cutout. Example added.
 
 ## Examples
 
@@ -65,5 +69,19 @@ var ca = document.createElement('canvas');
 	}
 ```
 
+**Individual image added as cutout**
+
+```js
+var ca = document.createElement('canvas');
+  var cx	=	ca.getContext('2d');
+	
+	var img = new Image();
+	img.src	=	'http://www.cw-internetdienste.de/overlay/assets/img/cursor.png';
+	img.onload	=	function() {
+		var overlayCanvas	=	$('#overlay').CanvasOverlay({shadow:50,radius:500,figure:img});
+	}
+```
+
 ## Release History
+ * 2013-07-08   v0.2.0   Second release. Enhanced blending mode and ability to add images as background and cutout.
  * 2013-06-25   v0.1.0   First initial release. Still experimental.
